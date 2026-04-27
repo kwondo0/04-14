@@ -8,6 +8,7 @@
   </head>
 
   <body>
+    <section class="card-container" id="cardContainer"></section>
     <section class="team">
       <section class="container">
         <article class="card highlight">
@@ -251,5 +252,36 @@
         </article>
       </section>
     </section>
+
+    <header class="controls">
+      <button id="addBtn">아기 사자 추가</button>
+      <button id="deleteLastBtn">마지막 아기 사자 삭제</button>
+      <span>총 <strong id="totalCount">0</strong>명</span>
+    </header>
+
+    <section id="formSection" class="hidden">
+      <form id="memberForm">
+        <div class="input-row">
+          <input type="text" name="name" placeholder="이름" required />
+          <select name="role">
+            <option value="Frontend">Frontend</option>
+            <option value="Backend">Backend</option>
+            <option value="Design">Design</option>
+          </select>
+        </div>
+        <input
+          type="text"
+          name="skills"
+          placeholder="관심 기술 (쉼표로 구분, 예: HTML, CSS, JS)"
+          required
+        />
+        <textarea name="intro" placeholder="자기소개 요약" required></textarea>
+        <div class="form-buttons">
+          <button type="submit">추가하기</button>
+          <button type="button" id="cancelBtn">취소</button>
+        </div>
+      </form>
+    </section>
+    <script src="script.js"></script>
   </body>
 </html>
